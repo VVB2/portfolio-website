@@ -1,0 +1,16 @@
+{
+  "name": "vinod-resume",
+  "version": "1.0.0",
+  "description": "Vinod's Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "html",
+    "javascript"
+  ],
+  "author": "VVB2",
+  "license": "MIT"
+}
