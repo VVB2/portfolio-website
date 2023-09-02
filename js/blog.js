@@ -50,12 +50,12 @@ $(function () {
     mediumPromise.then(function () {
       //Pagination
       pageSize = 3;
-  
       var pageCount = $(".card").length / pageSize;
   
       for (var i = 0; i < pageCount; i++) {
+        console.log("inside");
         $("#pagin").append(
-          `<li class="page-item"><a class="page-link" href="#">${i + 1}</a></li> `
+          `<li class="page-item"><a class="page-link" href="#blog">${i + 1}</a></li> `
         );
       }
       $("#pagin li:nth-child(1)").addClass("active");
