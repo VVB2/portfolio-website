@@ -21,7 +21,7 @@ $(function () {
               var srcEnd =
                 item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
               var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
-              output += `<img src="${src}" class="card-img-top" alt="Cover image">`;
+              output += `<img src="${src}" class="card-img-top" alt="Cover image" style="max-height: 200px">`;
               output += `<div class="card-body">`;
               output += `<h5 class="card-title"><a href="${item.link}" target="_blank">${item.title}</a></h5>`;
               var yourString = item.description.replace(/<img[^>]*>/g, ""); //replace with your string.
