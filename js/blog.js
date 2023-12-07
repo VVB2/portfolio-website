@@ -49,7 +49,6 @@ $(function () {
     var pageCount = $(".card").length / pageSize;
 
     for (var i = 0; i < pageCount; i++) {
-      console.log("inside");
       $("#pagin").append(
         `<li class="page-item"><a class="page-link" href="#blog">${i + 1}</a></li> `
       );
