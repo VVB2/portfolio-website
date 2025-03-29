@@ -1,10 +1,11 @@
-const URL = "https://rss-to-json-serverless-api.vercel.app/api?feedURL=https://medium.com/feed/@vinodvamanbhat";
+const MEDIUM_USERNAME = "@vinodvamanbhat";
+const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${MEDIUM_USERNAME}`;
 
 $(function () {
   var mediumPromise = new Promise(function (resolve) {
     var $content = $("#blog-content");
     $.get(
-      URL,
+      API_URL,
       function (response) {
         if (response.items.length > 0) {
           var output = "";

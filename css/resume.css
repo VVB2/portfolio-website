@@ -113,3 +113,87 @@ a {
   color: #BD5D38; }
   a:hover, a:focus, a:active {
     color: #824027; }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+
+
+    .img-profile {
+      aspect-ratio: 1;
+      object-fit: cover;
+      transform: translateZ(0); /* Force GPU acceleration */
+    }
+    
+    @media (max-width: 768px) {
+      .img-profile {
+        width: 120px;
+        height: 120px;
+      }
+    }
+    
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      transform: translateZ(0);
+    }
+
+    .resume-section {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .loading {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+
+    /* Loading states */
+.resume-section.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-section.loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Progress bar animations */
+.progress-bar {
+  transition: width 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Smooth section transitions */
+.resume-section {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+

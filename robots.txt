@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /resume & certifications/
+
+Sitemap: https://snazzy-tartufo-6f8f42.netlify.app//sitemap.xml
